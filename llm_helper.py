@@ -5,8 +5,7 @@ import os
 
 load_dotenv()
 
-llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.3-70b-versatile")
+print("API key :" + os.getenv("GROQ_API_KEY"))
 
-if __name__ == "__main__":
-    response =llm.invoke("What are the two main ingriedients in samosa?")
-    print(response.content)
+llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="meta-llama/llama-4-scout-17b-16e-instruct")
+
