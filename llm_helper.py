@@ -1,11 +1,9 @@
-from dotenv import load_dotenv
-from langchain_groq import ChatGroq
+from langchain_groq.chat_models import ChatGroq
 import os
-
+from dotenv import load_dotenv
 
 load_dotenv()
-
-print("API key :" + os.getenv("GROQ_API_KEY"))
-
-llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="meta-llama/llama-4-scout-17b-16e-instruct")
-
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama-3.2-90b-text-preview"
+)
